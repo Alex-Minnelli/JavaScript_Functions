@@ -101,10 +101,3 @@ function data(planLimit, day, usage){
         console.log(`You are safe to use up to ${(planLimit-usage)/(monthDays-day)} GB/day`);
     }
 }
-
-
-
-/* The function should compute whether the user is over, under, or right on the average daily usage under the plan. 
-It should also inform them of how much data is left 
-and how much, on average, they can use per day for the rest of the month. 
-If they’ve run out of data, it should inform them of that too. */
