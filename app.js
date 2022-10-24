@@ -94,10 +94,8 @@ function data(planLimit, day, usage){
         console.log(`You have EXCEEDED your monthly data limit`);
     }else if(currentAvg > avg){
         console.log(`You have ${planLimit-usage} GB left`);
-        let excess = ((monthDays*usage)/day)-planLimit;
-        console.log(`You are EXCEEDING your safe average daily use by using(${currentAvg} GB/day),\ncontinuning this usage, you'll exceed your data plan by ${excess} GB`);
-        let safe = (planLimit-usage)/(monthDays-day);
-        console.log(`To stay below your data limit, use no more than ${safe} GB/day.`)
+        console.log(`You are EXCEEDING your safe average daily use by using(${currentAvg} GB/day),\ncontinuning this usage, you'll exceed your data plan by ${((monthDays*usage)/day)-planLimit} GB`);
+        console.log(`To stay below your data limit, use no more than ${(planLimit-usage)/(monthDays-day)} GB/day.`)
     } else if (avg > currentAvg){
         console.log(`You have ${planLimit-usage} GB left`);
         console.log(`You are safe to use up to ${(planLimit-usage)/(monthDays-day)} GB/day`);
