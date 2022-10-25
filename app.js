@@ -25,7 +25,7 @@ function checkAge(userName, age){
     let aboveSixteen = `Congrats ${userName}, you can drive!`;
     let underSixteen = `Sorry ${userName}, but you need to wait until you're 16.`;
 
-    return age<16 ? underSixteen : aboveSixteen;
+    return age < 16 ? underSixteen : aboveSixteen;
 }
 
 // Exercise 3 Section
